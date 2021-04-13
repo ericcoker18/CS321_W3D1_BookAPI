@@ -30,7 +30,7 @@ namespace CS321_W3D1_BookAPI.Data
                 },
                 new Book
                 {
-                    Id = 1,
+                    Id = 2,
                     Title = "The Fellow Ship of the Ring",
                     Author = "J.R.R Tolkien",
                     Category = "Fantasy"
