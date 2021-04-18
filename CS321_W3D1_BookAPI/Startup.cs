@@ -23,9 +23,13 @@ namespace CS321_W3D1_BookAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            // TODO: register the BookContext for injection using AddDbContext
+            services.AddDbContext<BookContext>(options =>
+            {
+                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+            });
 
             // TODO: register the BookService for injection using AddScoped
+            services.AddScoped<IBookService, BookService> ();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
