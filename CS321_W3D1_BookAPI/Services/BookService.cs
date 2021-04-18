@@ -61,7 +61,7 @@ namespace CS321_W3D1_BookAPI.Services
 
         public void Remove(Book book)
         {
-            Remove(book);
+            _bookContext.Remove(book);
             _bookContext.SaveChanges();
         }
 

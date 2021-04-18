@@ -39,7 +39,7 @@ namespace CS321_W3D1_BookAPI.Controllers
             }
             else
             {
-                return Ok(id);
+                return Ok(book);
             }
 
         }
